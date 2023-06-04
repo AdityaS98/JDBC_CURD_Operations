@@ -46,6 +46,16 @@ public class AddressbookOperations {
 
 
 
+            //Delete
+
+            try (Statement statement = connection.createStatement()) {
+                String deleteQuery = "delete from adress_details WHERE id = 2";
+                statement.executeUpdate(deleteQuery);
+                System.out.println("Value deleted");
+
+            }
+
+
         }
     }
 }
