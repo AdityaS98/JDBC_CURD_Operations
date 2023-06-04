@@ -23,6 +23,16 @@ public class AddressbookOperations {
             }
 
 
+            //Insert
+
+            try(Statement statement = connection.createStatement()){
+                String insertQuery = "insert into adress_details(id,name,age,PhoneNumber,Email) value (1,'Aditya',23,'887613856','aditya@gmail.com'),(2,'Nitish',23,'9705992894','nitish@gmail.com'),(3,'Abhinav',24,'8090229460','abhinav@gmail.com')";
+                statement.executeUpdate(insertQuery);
+                System.out.println("Values are inserted");
+            }
+
+
+
         }
     }
 }
